@@ -1,0 +1,12 @@
+---
+- name: My first play
+  hosts: virtualmachines
+  tasks:
+  - name: Ping my hosts
+    ansible.builtin.ping:
+    
+  - name: Get OS version
+    debug:
+      msg: "OS on {{ ansible_distribution }} {{ ansible_distribution_version }} | Kernel versioon on {{ ansible_kernel }}"
+...
+
